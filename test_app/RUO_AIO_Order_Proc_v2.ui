@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1270</width>
+    <height>927</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_8">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_work_ins">
+       <attribute name="title">
+        <string>Work Instruction Generation / Inventory Assessment</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontal_layout_orders_outputs">
+          <item>
+           <widget class="QTabWidget" name="tab_widget_recipe_inputs">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_sharepoint_recipes">
+             <attribute name="title">
+              <string>Sharepoint</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="vertical_layout_tab_open_orders">
+              <item>
+               <widget class="QTabWidget" name="tab_widget_open_closed_orders">
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <widget class="QWidget" name="tab_open_orders">
+                 <attribute name="title">
+                  <string>Open Orders</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_5">
+                  <item row="0" column="0">
+                   <layout class="QVBoxLayout" name="vertical_layout_open_orders">
+                    <item>
+                     <spacer name="vertical_spacer_open_orders">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeType">
+                       <enum>QSizePolicy::Minimum</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>1</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="ListViewModel" name="list_view_open_orders"/>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="vertical_layout_open_orders_cmds">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontal_layout_open_orders_cmds_2">
+                        <item>
+                         <widget class="QLabel" name="label_open_orders_filter">
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Filter:</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="line_edit_open_orders_filter"/>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontal_layout_open_orders_cmds">
+                        <item>
+                         <widget class="QPushButton" name="btn_preview_open_orders">
+                          <property name="text">
+                           <string>Preview Open Order Recipe</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCommandLinkButton" name="btn_refresh_open_orders">
+                          <property name="maximumSize">
+                           <size>
+                            <width>30</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>../../Downloads/refreshBtn.png</normaloff>../../Downloads/refreshBtn.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="btn_gen_work_ins">
+                        <property name="text">
+                         <string>Generate Work Instructions</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="btn_execute_order">
+                        <property name="text">
+                         <string>Execute Order</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="tab_staged_orders">
+                 <attribute name="title">
+                  <string>Staged Orders</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_6">
+                  <item row="0" column="0">
+                   <layout class="QVBoxLayout" name="vertical_layout_open_orders_2">
+                    <item>
+                     <spacer name="vertical_spacer_staged_orders">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeType">
+                       <enum>QSizePolicy::Minimum</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>1</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="ListViewModel" name="list_view_staged_orders"/>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_4">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_3">
+                        <item>
+                         <widget class="QLabel" name="label_staged_orders_filter">
+                          <property name="font">
+                           <font>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Filter:</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="line_edit_staged_orders_filter"/>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_4">
+                        <item>
+                         <widget class="QPushButton" name="btn_open_batch_record">
+                          <property name="text">
+                           <string>Open Batch Record</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCommandLinkButton" name="btn_refresh_staged_orders">
+                          <property name="maximumSize">
+                           <size>
+                            <width>30</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>../../Downloads/refreshBtn.png</normaloff>../../Downloads/refreshBtn.png</iconset>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="btn_complete_order">
+                        <property name="text">
+                         <string>Complete Order</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="tab_closed_orders">
+                 <attribute name="title">
+                  <string>Closed Orders</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_10">
+                  <item row="0" column="0">
+                   <layout class="QGridLayout" name="grid_layout_closed_orders">
+                    <item row="0" column="0">
+                     <widget class="ListViewModel" name="list_view_closed_orders"/>
+                    </item>
+                    <item row="1" column="0">
+                     <layout class="QGridLayout" name="gridLayout_7">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_closed_orders_filter">
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Filter:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QLineEdit" name="line_edit_closed_orders_filter"/>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QPushButton" name="btn_preview_closed_orders">
+                        <property name="text">
+                         <string>Preview Complete Order</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QCommandLinkButton" name="btn_refresh_closed_orders">
+                        <property name="maximumSize">
+                         <size>
+                          <width>30</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>../../Downloads/refreshBtn.png</normaloff>../../Downloads/refreshBtn.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_local_references">
+             <attribute name="title">
+              <string>Local</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="vertical_layout_tab_local_refs">
+              <item>
+               <widget class="QLabel" name="label_filepath_to_order_recipe">
+                <property name="text">
+                 <string>Filepath to order recipe:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontal_layout_local_refs">
+                <item>
+                 <widget class="QLineEdit" name="line_edit_order_recipe_file"/>
+                </item>
+                <item>
+                 <widget class="QCommandLinkButton" name="btn_order_recipe_file_browse">
+                  <property name="maximumSize">
+                   <size>
+                    <width>35</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../Downloads/browseBtn.png</normaloff>../../Downloads/browseBtn.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_filepath_to_dx1577_inv">
+                <property name="text">
+                 <string>Filepath to DX1577 inventory:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontal_layout_local_refs_2">
+                <item>
+                 <widget class="QLineEdit" name="line_edit_local_dx1577_file"/>
+                </item>
+                <item>
+                 <widget class="QCommandLinkButton" name="btn_local_dx1577_file_browse">
+                  <property name="maximumSize">
+                   <size>
+                    <width>35</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../Downloads/browseBtn.png</normaloff>../../Downloads/browseBtn.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_filepath_to_odoo_inv">
+                <property name="text">
+                 <string>Filepath to Odoo inventory:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontal_layout_local_refs_3">
+                <item>
+                 <widget class="QLineEdit" name="line_edit_local_odoo_inv_file"/>
+                </item>
+                <item>
+                 <widget class="QCommandLinkButton" name="btn_local_odoo_inv_file_browse">
+                  <property name="maximumSize">
+                   <size>
+                    <width>35</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../Downloads/browseBtn.png</normaloff>../../Downloads/browseBtn.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_local_ref_files_hint">
+                <property name="font">
+                 <font>
+                  <kerning>true</kerning>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Hint: Type, drag and drop, or browse for filepath</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="tab_widget_output_viewers">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_work_ins_viewer">
+             <attribute name="title">
+              <string>Work Instructions Viewer</string>
+             </attribute>
+             <layout class="QGridLayout" name="grid_layout_work_ins_viewer">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="vertical_layout_work_ins_viewer">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontal_layout_work_ins_viewer">
+                  <item>
+                   <widget class="QLabel" name="label_work_ins_viewer_GSP1">
+                    <property name="text">
+                     <string>GSP1</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontal_spacer_work_ins_viewer_GSP1">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QTableView" name="table_view_work_ins_viewer_GSP1"/>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontal_layout_work_ins_viewer_2">
+                  <item>
+                   <widget class="QLabel" name="label_work_ins_viewer_GSP2">
+                    <property name="text">
+                     <string>GSP2</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontal_spacer_works_ins_GSP2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QTableView" name="table_view_work_ins_viewer_GSP2"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_logged_inputs_viewer">
+             <attribute name="title">
+              <string>Logged Inputs</string>
+             </attribute>
+             <layout class="QGridLayout" name="grid_layout_logged_inputs">
+              <item row="0" column="0">
+               <widget class="QTableView" name="table_view_logged_inputs"/>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontal_layout_options">
+          <item>
+           <widget class="QTabWidget" name="tabWidget_3">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_5">
+             <attribute name="title">
+              <string>Required Inputs</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="vertical_layout_required_inputs">
+                <item>
+                 <layout class="QGridLayout" name="inner_grid_layout_required_inputs">
+                  <item row="0" column="2">
+                   <spacer name="horizontal_spacer_required_inputs">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="line_edit_num_sa">
+                    <property name="maximumSize">
+                     <size>
+                      <width>200</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="line_edit_build_volume">
+                    <property name="maximumSize">
+                     <size>
+                      <width>200</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QRadioButton" name="radio_btn_num_sa">
+                    <property name="text">
+                     <string>Number of SA:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QRadioButton" name="radio_btn_volume">
+                    <property name="text">
+                     <string>Volume (mL):</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2">
+                   <spacer name="vertical_spacer_required_inputs">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_clear_req_ins_wi_gen">
+                <property name="text">
+                 <string>Clear Required Inputs</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_6">
+             <attribute name="title">
+              <string>Optional Inputs</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="vertical_layout_optional_inputs">
+                <item>
+                 <layout class="QGridLayout" name="inner_grid_layout_optional_inputs">
+                  <item row="1" column="3">
+                   <widget class="QLineEdit" name="line_edit_force_bc">
+                    <property name="placeholderText">
+                     <string>Ex: 3098294739, 3902938492</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <widget class="QLineEdit" name="line_edit_exclude_bc">
+                    <property name="placeholderText">
+                     <string>Ex: 3098294739, 3902938492</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="line_edit_force_lots">
+                    <property name="placeholderText">
+                     <string>Ex: 39801293, 38293012, ...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QCheckBox" name="check_box_exclude_lots">
+                    <property name="text">
+                     <string>Exclude Lots</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="line_edit_min_exp">
+                    <property name="placeholderText">
+                     <string>Ex: 2023/01</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QCheckBox" name="check_box_force_lots">
+                    <property name="text">
+                     <string>Force Lots</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QCheckBox" name="check_box_min_exp">
+                    <property name="text">
+                     <string>Min Expiry (yyyy/mm)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="3">
+                   <widget class="QLineEdit" name="line_edit_custom_overage">
+                    <property name="placeholderText">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLineEdit" name="line_edit_custom_retain_vol">
+                    <property name="placeholderText">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="3">
+                   <widget class="QCheckBox" name="check_box_force_qc_only">
+                    <property name="text">
+                     <string>Force QC Tubes Only</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2">
+                   <widget class="QCheckBox" name="check_box_custom_overage">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Custom Overage (mL)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QCheckBox" name="check_box_force_bc">
+                    <property name="text">
+                     <string>Force Barcodes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="line_edit_exclude_lots">
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Ex: 39801293, 38293012, ...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="2">
+                   <widget class="QCheckBox" name="check_box_pick_lifo">
+                    <property name="text">
+                     <string>Pick LIFO</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QCheckBox" name="check_box_custom_retain_vol">
+                    <property name="font">
+                     <font>
+                      <pointsize>9</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Custom Retain Vol (uL):</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QCheckBox" name="check_box_exclude_bc">
+                    <property name="text">
+                     <string>Exclude Barcodes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="2">
+                   <spacer name="optional_inputs_vertical_spacer">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="btn_clear_all_ins_wi_gen_2">
+                <property name="text">
+                 <string>Clear Optional Inputs</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_7">
+             <attribute name="title">
+              <string>Advanced Actions</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0">
+               <layout class="QGridLayout" name="grid_layout_main_actions">
+                <item row="0" column="3">
+                 <widget class="QPushButton" name="btn_pick_to_SAM">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Send Picklist to SAM</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="btn_open_F059_GSP2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Open F059 GSP2</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="btn_open_F059_GSP1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Open F059 GSP1</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="btn_open_inv_wi_tab">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Open Inventory</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="btn_autofill_F059_GSP2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Autofill F059 GSP2</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="btn_refresh_inv_wi_tab">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Refresh Inventory</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QPushButton" name="btn_mix_to_Tecan">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Send Mixing to Tecan</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="btn_autofill_F059_GSP1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Autofill F059 GSP1</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="4">
+                 <widget class="QPushButton" name="btn_console_log_toggle">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Toggle Console Log</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_recipe_gen">
+       <attribute name="title">
+        <string>Recipe Generation</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="vertical_layout_recipe_gen">
+          <item>
+           <layout class="QVBoxLayout" name="vertical_layout_recipe_gen_inputs">
+            <item>
+             <layout class="QHBoxLayout" name="horizontal_layout_recipe_gen_ins">
+              <item>
+               <layout class="QVBoxLayout" name="vertical_layout_recipe_gen_ins">
+                <item>
+                 <layout class="QGridLayout" name="grid_layout_recipe_gen_input_paths">
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_panel_info_filepath">
+                    <property name="text">
+                     <string>Panel info file path:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="LineEditDnD" name="line_edit_BED_filepath"/>
+                  </item>
+                  <item row="6" column="1">
+                   <widget class="LineEditDnD" name="line_edit_spikein_folder"/>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_CTF_filepath">
+                    <property name="text">
+                     <string>CTF file path:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="LineEditDnD" name="line_edit_panel_info_filepath"/>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="LineEditDnD" name="line_edit_design_repo_folder"/>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_GTF_filepath">
+                    <property name="text">
+                     <string>GTF file path:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="LineEditDnD" name="line_edit_CTF_filepath"/>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QLabel" name="label_spikein_folder">
+                    <property name="text">
+                     <string>Spike-in folder:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QLabel" name="label_design_repo_folder">
+                    <property name="text">
+                     <string>Design repository folder:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_BED_filepath">
+                    <property name="text">
+                     <string>BED file path:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="LineEditDnD" name="line_edit_GTF_filepath"/>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_recipe_gen_inputs">
+                    <property name="font">
+                     <font>
+                      <pointsize>13</pointsize>
+                      <bold>true</bold>
+                      <underline>true</underline>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Inputs</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QGridLayout" name="grid_layout_recipe_gen_toggleables">
+                  <item row="1" column="0">
+                   <widget class="QCheckBox" name="check_box_disable_GTF_cleaning">
+                    <property name="text">
+                     <string>Disable GTF cleaning</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QCheckBox" name="check_box_disable_prod_insert_gen">
+                    <property name="text">
+                     <string>Disable product insert generation</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QCheckBox" name="check_box_verbose_logging">
+                    <property name="text">
+                     <string>Verbose logging</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QCheckBox" name="check_box_disable_CTF_cleaning">
+                    <property name="text">
+                     <string>Disable CTF cleaning</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QCheckBox" name="check_box_disable_dbom_xml_file_gen">
+                    <property name="text">
+                     <string>Disable dBOM XML file generation</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QCheckBox" name="check_box_disable_calc_vols_for_raw_mats">
+                    <property name="text">
+                     <string>Disable calculating volumes for raw materials</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QCheckBox" name="check_box_disable_label_info_file_gen">
+                    <property name="text">
+                     <string>Disable label info file generation</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QCheckBox" name="check_box_disable_oddo_bom_file_gen">
+                    <property name="text">
+                     <string>Disable Odoo BOM file generation</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QTabWidget" name="tabWidget_2">
+                  <property name="currentIndex">
+                   <number>0</number>
+                  </property>
+                  <widget class="QWidget" name="tab_CTFS_to_ignore">
+                   <attribute name="title">
+                    <string>CTFs to ignore</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout">
+                    <item>
+                     <widget class="ListViewDnD" name="list_view_CTFS_to_ignore"/>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_remove_CTF_to_ignore">
+                      <property name="text">
+                       <string>Remove CTF(s) to ignore</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_clr_all_CTFS_to_ignore">
+                      <property name="text">
+                       <string>Clear All CTF(s) to ignore</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="tab_custom_pick_CTFS">
+                   <attribute name="title">
+                    <string>Custom pick CTFs</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_2">
+                    <item>
+                     <widget class="ListViewDnD" name="list_view_custom_pick_CTFS"/>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_remove_custom_pick_CTF">
+                      <property name="text">
+                       <string>Remove Custom Pick CTF(s)</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_clr_all_custom_pick_CTFS">
+                      <property name="text">
+                       <string>Clear All Custom Pick CTF(s)</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="vertical_layout_CTFS_to_ignore">
+                <item>
+                 <widget class="QLabel" name="label_recipe_preview">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                    <bold>true</bold>
+                    <underline>true</underline>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Recipe Preview</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTextBrowser" name="text_browser_recipe_preview"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_clr_all_ins_recipe_gen">
+            <property name="text">
+             <string>Clear All Inputs</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="vertical_layout_recipe_gen_outputs">
+            <item>
+             <widget class="QLabel" name="label_recipe_gen_outputs">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <bold>true</bold>
+                <underline>true</underline>
+               </font>
+              </property>
+              <property name="text">
+               <string>Outputs</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontal_layout_recipe_gen_outputs">
+              <item>
+               <widget class="QLabel" name="label_recipe_gen_output_folder">
+                <property name="text">
+                 <string>Output folder:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="LineEditDnD" name="line_edit_recipe_gen_output_folder"/>
+              </item>
+              <item>
+               <spacer name="horizontal_spacer_recipe_gen_outputs">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_gen_recipe">
+            <property name="text">
+             <string>Generate Recipe</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_post_recipe">
+            <property name="text">
+             <string>Post Recipe</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_mod_inv">
+       <attribute name="title">
+        <string>Modify Inventory</string>
+       </attribute>
+       <layout class="QGridLayout" name="grid_layout_tab_mod_inv">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_inv_upd_sht">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Inventory Update Sheet</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontal_layout_inv_upd_sht_line_edit">
+          <item>
+           <widget class="QLineEdit" name="line_edit_inv_upd_sht"/>
+          </item>
+          <item>
+           <widget class="QCommandLinkButton" name="btn_inv_upd_sht_help">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../Downloads/Question_Mark.jpg</normaloff>../../Downloads/Question_Mark.jpg</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QRadioButton" name="rad_btn_volumes_consumed">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Volumes are to be consumed</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_consumed_hint">
+          <property name="font">
+           <font>
+            <italic>true</italic>
+           </font>
+          </property>
+          <property name="text">
+           <string>Hint: This will decrement the volume for existing barcodes.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QRadioButton" name="rad_btn_volumes_posted">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Volumes are to be posted</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_posted_hint">
+          <property name="font">
+           <font>
+            <italic>true</italic>
+           </font>
+          </property>
+          <property name="text">
+           <string>Hint: This will overwrite any existing barcodes with new information AND OR upload new barcodes.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QPushButton" name="btn_refresh_inv_mod_inv_tab">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Refresh Inventory</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QPushButton" name="btn_open_inv_mod_inv_tab">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Open Inventory</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QPushButton" name="btn_update_inv">
+          <property name="text">
+           <string>Update Inventory</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <spacer name="vertical_spacer_mod_inv">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1270</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>89</width>
+     <height>113</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Console Log</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dock_widget_console_log_contents">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_16">
+     <item>
+      <widget class="QTextBrowser" name="text_browser_console_log">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>5</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionLight">
+   <property name="text">
+    <string>Light</string>
+   </property>
+  </action>
+  <action name="actionDark">
+   <property name="text">
+    <string>Dark</string>
+   </property>
+  </action>
+  <action name="actionChewy">
+   <property name="text">
+    <string>Chewy</string>
+   </property>
+  </action>
+  <action name="actionConsole_Log">
+   <property name="text">
+    <string>Console Log</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LineEditDnD</class>
+   <extends>QLineEdit</extends>
+   <header>customWidgets.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ListViewDnD</class>
+   <extends>QListView</extends>
+   <header>customWidgets.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ListViewModel</class>
+   <extends>QListView</extends>
+   <header>customWidgets.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

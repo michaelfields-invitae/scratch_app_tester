@@ -1,0 +1,12 @@
+# maybe we should make this a json or yaml instead
+# name of alternate mapping (any name is fine because it's not used anywhere; script just looks for > as a delimiter)
+>SNPID chrX chrY
+# first line is the GTF line to search for (do not use the same GTF line multiple times)
+chrX	ArcherAssay	primer_bind	4429316	4429342	1	-	.	name "None_chrX_4429315_27_-_A1_GSP2"; gene_id ""; exon_number ""; transcript_id ""; function "SEX_ID";
+# subsequent lines are alternate mapping GTF lines to look for and add if they aren't present.
+# Can have as many alternate mapping GTF lines as needed.
+chrY	ArcherAssay	primer_bind	19490221	19490247	1	-	.	name "None_chrY_19490220_27_-_A1_GSP2"; gene_id ""; exon_number ""; transcript_id ""; function "SEX_ID";
+
+>SNPID AMELX AMELY
+chrX	ArcherAssay	primer_bind	11314401	11314426	1	+	.	name "ARHGAP6_chrX_11314400_26_+_A1_GSP2"; gene_id "AMELX"; exon_number ""; transcript_id "NM_001142"; function "SEX_ID";
+chrY	ArcherAssay	primer_bind	6738559	6738584	1	-	.	name "AMELY_chrY_6738558_26_-_A1_GSP2"; gene_id "AMELY"; exon_number ""; transcript_id "NM_001143"; function "SEX_ID";

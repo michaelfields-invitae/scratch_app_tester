@@ -1,0 +1,60 @@
+# lines that start with an '#' are comments that get ignored by the script
+# unlike Python, you cannot use '#' to start a comment at the end of a line
+# lines consisting of empty strings or only whitespace characters are also ignored
+# tabs (not spaces) or commas are used as delimiters
+
+# each of these header values must be specified in this file (order doesn't matter) or the script will abort
+[Header]
+Panel ID	12345
+Panel Name	My Custom Panel Name
+# allowed workflows: FusionPlex, LiquidPlex, VariantPlex Standard, VariantPlex HS, VariantPlex HGC, VariantPlex HGC2.0
+Workflow	FusionPlex
+# allowed diseases: Solid Tumor, Blood Cancers, Sarcoma, Germline
+Disease	Solid Tumor
+# allowed sequencing platforms: Illumina, Ion Torrent
+Sequencing Platform	Illumina
+Analysis Version	7.0
+Bundle ID	12345
+
+# this section and all of these settings are optional and won't crash the script if they aren't included in the file
+# below are the default values that will be used if these settings aren't found in this file
+[Settings]
+Movianto Order	FALSE
+Bulk Intermediate Prefix	dGSP
+Subassembly Prefix	dSA
+Frozen Components Kit Prefix	dSK
+Bundle Prefix	DB
+BOL Upper Temp Limit	-10
+BOL Lower Temp Limit	-30
+BOS Bulk Product Type	07
+BOS Aliquot Product	07
+Reads Required	1000000
+Max Target ROI Distance	100
+#Only include this setting if you want to override the default values for GTF ROI Target Buffer during GTF cleaning
+#GTF ROI Target Buffer	15
+Bulk Manufacturing Volume	1
+
+# This chunk of settings are only needed for supplementary modules. All of these settings must be specified together.
+# Do not include these settings for regular panels.
+# Supplementary Module Reactions	8
+# Supplementary Module Prefix	SM
+# Actual Fill Volume mL GSP1	0.04000
+# Nominal Fill Volume uL GSP1	32.00000
+# Actual Fill Volume mL GSP2	0.04000
+# Nominal Fill Volume uL GSP2	32.00000
+
+# these sections list the raw material part numbers, volumes (mL), and spike-in ERP descriptions (if applicable)
+# make sure to include a spike-in ERP description for the spike-in parts, or they won't get the right Syncade part numbers
+# if there are no raw materials for a subassembly, a dBOM will be generated without a process segment for building the bulk intermediate
+[GSP1]
+AD11111-1	0.25100
+AD2222-1	0.45800
+AD99999-1	0.29100	Spike-In ERP Description
+
+# gsp2 may also include a DI water part, which will always have a part number of DX0612
+[GSP2]
+AD11111-2	0.24812
+AD2222-2	0.07123
+AD99999-2	0.20852	Spike-In ERP Description
+DX0612	0.47213
+

@@ -1,0 +1,12 @@
+# maybe we should make this a json or yaml instead
+# name of alternate mapping (any name is fine because it's not used anywhere; script just looks for > as a delimiter)
+>SNPID chrX chrY
+# first line is the CTF line to search for (do not use the same CTF line multiple times)
+			chrY	4429257	4429315	-	chrX_sexID2_SEX_ID	tile	3	4429320	4429343	None_chrX_4429320_23_-_A1_GSP1	ctgtggctgtatcatcccacaca	1	TRUE	4429315	4429342	None_chrX_4429315_27_-_A1_GSP2	tgtggctgtatcatcccacacattcat	1	TRUE	SEX_ID		SEARCH_IGNORE
+# subsequent lines are alternate mapping CTF lines to look for and add if they aren't present.
+# Can have as many alternate mapping CTF lines as needed.
+			chrY	19490214	19490215	-	chrY_sexID2_SEX_ID	tile	3	19490225	19490248	None_chrY_19490225_23_-_A1_GSP1	ctgtggctgtatcatcccacaca	0.0	true	19490220	19490247	None_chrY_19490220_27_-_A1_GSP2	tgtggctgtatcatcccacacattcat	0.0	true	SEX_ID,CNV,CNV_NO_DISPLAY		SEARCH_IGNORE
+
+>SNPID AMELX AMELY
+AMELX			chrX	11314432	11314485	+	chrX_sexID1_SEX_ID	tile	3	11314397	11314422	ARHGAP6_chrX_11314397_25_+_A1_GSP1	tgaccacctcctgatctacaaggga	1	TRUE	11314400	11314426	ARHGAP6_chrX_11314400_26_+_A1_GSP2	ccacctcctgatctacaagggaacat	1	TRUE	SEX_ID		SEARCH_IGNORE
+AMELY			chrY	6738552	6738553	-	chrY_sexID1_SEX_ID	tile	3	6738562	6738587	AMELY_chrY_6738562_25_-_A1_GSP1	tgaccacctcctgatctacaaggga	0.0	true	6738558	6738584	AMELY_chrY_6738558_26_-_A1_GSP2	ccacctcctgatctacaagggaacat	0.0	true	SEX_ID,CNV,CNV_NO_DISPLAY		SEARCH_IGNORE
